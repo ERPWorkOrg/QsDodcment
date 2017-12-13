@@ -1,0 +1,30 @@
+create table arap_tax001 (
+pk_begin CHAR(20) NOT NULL,
+in_org VARCHAR(20) default '~' NULL,
+pk_marbasclass VARCHAR(20) default '~' NULL,
+pk_marbasclass_b VARCHAR(20) default '~' NULL,
+invoice_properties VARCHAR(20) default '~' NULL,
+pk_accperiod VARCHAR(20) default '~' NULL,
+pk_accperiodmonth VARCHAR(20) default '~' NULL,
+qcnum DECIMAL(28,8) NULL,
+qcprice DECIMAL(28,8) NULL,
+qcmoney DECIMAL(28,8) NULL,
+dbilldate CHAR(19) NULL,
+pk_group VARCHAR(20) NOT NULL,
+pk_org VARCHAR(20) default '~' NULL,
+pk_org_v VARCHAR(20) default '~' NULL,
+code VARCHAR(50) NULL,
+name VARCHAR(50) NULL,
+maketime CHAR(19) NOT NULL,
+lastmaketime CHAR(19) NULL,
+rowno VARCHAR(50) NULL,
+creator VARCHAR(20) default '~' NULL,
+creationtime CHAR(19) NULL,
+modifier VARCHAR(20) default '~' NULL,
+modifiedtime CHAR(19) NULL,
+CONSTRAINT PK_ARAP_TAX001 PRIMARY KEY (pk_begin),
+ts char(19) default to_char(sysdate,'yyyy-mm-dd hh24:mi:ss') NULL,
+ dr smallint default 0 NULL 
+)
+
+
